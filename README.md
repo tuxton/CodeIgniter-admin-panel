@@ -6,7 +6,7 @@ Sample administrator panel using CodeIgniter 2.1.2 with Mysql and Twitter Bootst
 <h2>Requirements</h2>
 <ul>
 <li>
-<a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> 2.0.4+</li>
+<a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> 3.0.1+</li>
 <li>
 <a href="http://jquery.com/" target="_blank">jQuery</a> 1.7.1+</li>
 </ul>
