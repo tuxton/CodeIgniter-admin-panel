@@ -5,7 +5,6 @@
           <a href="<?php echo site_url("admin"); ?>">
             <?php echo ucfirst($this->uri->segment(1));?>
           </a> 
-          <span class="divider">/</span>
         </li>
         <li class="active">
           <?php echo ucfirst($this->uri->segment(2));?>
@@ -61,6 +60,7 @@
               <tr>
                 <th class="header">#</th>
                 <th class="yellow header headerSortDown">Name</th>
+                <th class="yellow header headerSortDown">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -71,8 +71,8 @@
                 echo '<td>'.$row['id'].'</td>';
                 echo '<td>'.$row['name'].'</td>';
                 echo '<td class="crud-actions">
-                  <a href="'.site_url("admin").'/manufacturers/update/'.$row['id'].'" class="btn btn-info">view & edit</a>  
-                  <a href="'.site_url("admin").'/manufacturers/delete/'.$row['id'].'" class="btn btn-danger">delete</a>
+                  <a href="'.site_url("admin").'/manufacturers/update/'.$row['id'].'" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i></a>  
+                  <a href="'.site_url("admin").'/manufacturers/delete/'.$row['id'].'" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                 </td>';
                 echo '</tr>';
               }
@@ -80,7 +80,7 @@
             </tbody>
           </table>
 
-          <?php echo '<div class="pagination">'.$this->pagination->create_links().'</div>'; ?>
+          <?php echo $this->pagination->create_links(); ?>
 
       </div>
     </div>

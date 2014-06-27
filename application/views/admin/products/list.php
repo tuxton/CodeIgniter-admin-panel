@@ -5,7 +5,6 @@
           <a href="<?php echo site_url("admin"); ?>">
             <?php echo ucfirst($this->uri->segment(1));?>
           </a> 
-          <span class="divider">/</span>
         </li>
         <li class="active">
           <?php echo ucfirst($this->uri->segment(2));?>
@@ -44,8 +43,7 @@
             echo form_open('admin/products', $attributes);
      
               echo form_label('Search:', 'search_string');
-              echo form_input('search_string', $search_string_selected, 'style="width: 170px;
-height: 26px;"');
+              echo form_input('search_string', $search_string_selected, 'style="width: 170px; height: 26px;"');
 
               echo form_label('Filter by manufacturer:', 'manufacture_id');
               echo form_dropdown('manufacture_id', $options_manufacture, $manufacture_selected, 'class="span2"');
@@ -89,8 +87,8 @@ height: 26px;"');
                 echo '<td>'.$row['sell_price'].'</td>';
                 echo '<td>'.$row['manufacture_name'].'</td>';
                 echo '<td class="crud-actions">
-                  <a href="'.site_url("admin").'/products/update/'.$row['id'].'" class="btn btn-info">view & edit</a>  
-                  <a href="'.site_url("admin").'/products/delete/'.$row['id'].'" class="btn btn-danger">delete</a>
+                  <a href="'.site_url("admin").'/products/update/'.$row['id'].'" class="btn btn-info"><i class="glyphicon glyphicon-pencil"></i></a>  
+                  <a href="'.site_url("admin").'/products/delete/'.$row['id'].'" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
                 </td>';
                 echo '</tr>';
               }
@@ -98,7 +96,7 @@ height: 26px;"');
             </tbody>
           </table>
 
-          <?php echo '<div class="pagination">'.$this->pagination->create_links().'</div>'; ?>
+          <?php echo $this->pagination->create_links()?>
 
       </div>
     </div>

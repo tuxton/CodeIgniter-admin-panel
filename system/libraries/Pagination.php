@@ -40,8 +40,8 @@ class CI_Pagination {
 	var $prev_link			= '&lt;';
 	var $last_link			= 'Last &rsaquo;';
 	var $uri_segment		= 3;
-	var $full_tag_open		= '';
-	var $full_tag_close		= '';
+	var $full_tag_open		= '<div><ul class="pagination pagination-small pagination-centered">';
+	var $full_tag_close		= '</ul></div>';
 	var $first_tag_open		= '';
 	var $first_tag_close	= '&nbsp;';
 	var $last_tag_open		= '&nbsp;';

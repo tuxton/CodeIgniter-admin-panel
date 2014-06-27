@@ -1,18 +1,19 @@
 <?php
 class Manufacturers_model extends CI_Model {
- 
+    
     /**
     * Responsable for auto load the database
     * @return void
     */
     public function __construct()
     {
+        parent::__construct();
         $this->load->database();
     }
 
     /**
     * Get product by his is
-    * @param int $product_id 
+    * @param int $id this is a product id
     * @return array
     */
     public function get_manufacture_by_id($id)
@@ -127,4 +128,3 @@ class Manufacturers_model extends CI_Model {
 	}
  
 }
-?>	
